@@ -302,6 +302,11 @@ footer{
   	margin-top: 10px;
     align-items: center;
 }
+#id00{
+  	padding-top: 30px;
+  	margin-top: 10px;
+    align-items: center;
+}
 .container3{
 	align-items: center;
 }
@@ -350,6 +355,19 @@ button:hover {
 
 }
 .modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: 
+  background-color: rgba(0,0,0,0.4); /
+  padding-top: 60px;
+}
+.modal1 {
   display: none; 
   position: fixed;
   z-index: 1; 
