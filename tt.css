@@ -291,13 +291,13 @@ footer{
   border-radius: 10px;
   transform: scale(.5);
   transform: translateY(-50px);
-  box-shadow: 15px 15px 20px 15px #e6e6e6ab;
+  box-shadow: 0.5px 10px 11px 15px #054b60;
   border: 1px solid #e4e4e4;
   align-items: center;
 }
 
 
-#id03{
+#id02{
   	padding-top: 30px;
   	margin-top: 10px;
     align-items: center;
@@ -401,7 +401,7 @@ button:hover {
 }
 
 
-.close {
+.close1 {
   position: absolute;
   right: 25px;
   top: 0;
@@ -410,6 +410,44 @@ button:hover {
   font-weight: bold;
   cursor: pointer;
   margin: 1%;
+}
+.close1:hover,
+.close1:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.close2 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1%;
+}
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.close3 {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1%;
+}
+.close3:hover,
+.close3:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 input[type=submit]:hover {
   background-color: #45a049;
