@@ -312,7 +312,6 @@ footer{
   	margin-top: 10px;
     align-items: center;
 }
-.cont
 .container3{
 	align-items: center;
 }
@@ -400,7 +399,15 @@ button:hover {
   padding-top: 60px;
 }
 
-
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
 .close1 {
   position: absolute;
   right: 25px;
