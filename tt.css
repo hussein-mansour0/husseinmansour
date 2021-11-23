@@ -307,6 +307,12 @@ footer{
   	margin-top: 10px;
     align-items: center;
 }
+#id01{
+  	padding-top: 30px;
+  	margin-top: 10px;
+    align-items: center;
+}
+.cont
 .container3{
 	align-items: center;
 }
@@ -380,6 +386,19 @@ button:hover {
   background-color: rgba(0,0,0,0.4); /
   padding-top: 60px;
 }
+.modal2 {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: 
+  background-color: rgba(0,0,0,0.4); /
+  padding-top: 60px;
+}
 
 
 .close {
@@ -396,6 +415,18 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 input[type=text], select, textarea {
+  width: 98%;
+  padding: 14px; 
+  border: .5px solid #ccc; 
+  border-radius: 20px; 
+  box-sizing: border-box;
+  margin-top: 3px; 
+  margin-bottom: 6px; 
+  resize: vertical; 
+  align-items: center;
+  margin: 1%;
+}
+input[type=password]{
   width: 98%;
   padding: 14px; 
   border: .5px solid #ccc; 
