@@ -39,10 +39,10 @@
             <li class="item"><a href="#Home">Home</a></li>
             <li class="item"><a href="#About">About</a></li>
             <li class="item"><a href="#Services">Services</a></li>
-            <li class="item"><a href="#Contact" onclick="document.getElementById('id03').style.display='block' " class="log" style="width:auto;"class="log" style="width:auto;">Contact</a></li>
+            <li class="item"><a href="#Contact" onclick="document.getElementById('id03').style.display='block' " class="contact" style="width:auto;"class="log" style="width:auto;">Contact</a></li>
             </li>
-            <li class="item button"><a href="#LogIn">Log In</a></li>
-            <li class="item button secondary"><a href="#SignUp" onclick="document.getElementById('id00').style.display='block' " class="log" style="width:auto;"class="log" style="width:auto;">Sign Up</a></li>
+            <li class="item button"><a href="#LogIn" onclick="document.getElementById('id01').style.display='block' " class="signup" style="width:auto;"class="log" style="width:auto;">Log In</a></li>
+            <li class="item button secondary"><a href="#SignUp"  onclick="document.getElementById('id00').style.display='block' " class="signup" style="width:auto;"class="log" style="width:auto;">Sign Up</a></li>
             <li class="toggle"><span class="bars"></span></li>
         </ul>
 
@@ -85,11 +85,34 @@
             </div>
   <label for="fname">User Name:</label><br>
   <input type="text" id="fname" placeholder="Enter Username" name="fname" ><br>
+  <label for="fname">Email Adress</label><br>
+  <input type="text" id="fname" placeholder="Email Adress" name="fname" ><br>
+
+  <label for="fname">Phone Number</label><br>
+  <input type="text" id="fname" placeholder="Phone Number" name="phone" ><br>
+  <label for="lname">Password</label><br>
+  <input type="password" id="lname" placeholder="Enter Password" name="lname" ><br><br>
+  <button type="submit" value="Submit">Sign Up</button> 
+</form> 
+</div>
+	<div id="id01" class="modal2">
+<form class="modal-content3" action="/action_page2.php" method="post">
+	
+            <div class="imgcontainer3">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
+            <img src="hussein man logo blue.png" class="ii" style="width:250px;height:250px;">
+            <h2>LogIn</h2>
+            </div>
+  <label for="fname">User Name:</label><br>
+  <input type="text" id="fname" placeholder="Enter Username" name="fname" ><br>
   <label for="lname">Password</label><br>
   <input type="text" id="lname" placeholder="Enter Password" name="lname" ><br><br>
   <button type="submit" value="Submit">Sign Up</button> 
 </form> 
 </div>
+
+	
 
 
 
@@ -135,6 +158,14 @@ window.onclick = function(event) {
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal1) {
+        modal.style.display = "none";
+    }
+}
+		
+		var modal2 = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
         modal.style.display = "none";
     }
 }
