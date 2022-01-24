@@ -9,12 +9,10 @@
 <link rel="shortcut icon" type="image/x-icon" href="hussein man logo blue.png">
 
 <link rel="mask-icon" type="image/x-icon" href="hussein man logo blue.png" color="#111">
-
-
-  <title>hussein - Contact Form</title>
+  <title>Hussein Mansour - QUICK CONTACT</title>
   
   
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   
 <style>
 .container {
@@ -28,11 +26,29 @@ input {
   transition: all 0.5s;
 }
 </style>
-<body>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
   <div class="container">
   <form onsubmit="sendEmail(event)">
     <legend>Contact Form</legend>
-    <div id="alert-field" class=""><progress></progress></div>    
+    <div id="alert-field" class="alert hidden">
+      <p>Uh oh! Something went wrong!</p>
+    </div>    
     <div class="form-group col-xs-6">
       <label for="name-field">Name</label>
       <input type="text" class="form-control" id="name-field" name="name-field" placeholder="Your name" required="">
@@ -43,8 +59,21 @@ input {
       <input type="email" class="form-control" id="email-field" name="email-field" placeholder="Email address" required="">
     </div>
     
-   
+    <div id="subject-select" class="form-group col-xs-12">
+      <label for="subject-field">Subject</label>
+      <select class="form-control" name="subject-field" onchange="changeSubject(event)" required="">
+        <option value="Consulting">#computer science</option>
+        <option value="Web Development">Web Development projects</option>
+        <option value="Google Scripts">Google Apps Scripts</option>
+        <option value="G Suite for Education">Project mangement</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
     
+    <div id="hidden-other-subject" class="form-group col-xs-6 hidden">
+      <label for="other-subject-field">Other</label>
+      <input type="text" class="form-control" id="other-subject-field" name="other-subject-field" placeholder="Other subject">
+    </div>
     
     <div class="form-group col-xs-12">
       <label for="body-field">Message</label>
@@ -52,24 +81,23 @@ input {
     </div>
     
     <div class="form-group col-xs-12">
-      <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>  
-      <a href="https://hussein-mansour0.github.io/husseinmansour/">Back Home</a>
+      <button type="submit" class="btn btn-primary btn-lg btn-block" >Submit</button>  
     </div>
     
   </form>
 </div>
-  
-<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-9798103d-5f5d-5ce8-7a82-954aa8092450" crossorigin=""></script>
-<script type="text/javascript">$(function() {
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script id="rendered-js">
+$(function () {
   $('.form-control').focus(formFocus);
 });
 
 function formFocus() {
-  $('#alert-field')
-    .removeClass()
-    .addClass('hidden');
+  $('#alert-field').
+  removeClass().
+  addClass('hidden');
 }
 
 function sendEmail(e) {
@@ -81,24 +109,24 @@ function sendEmail(e) {
     name: e.target['name-field'].value,
     email: e.target['email-field'].value,
     subject: e.target['other-subject-field'].value || e.target['subject-field'].value,
-    body: e.target['body-field'].value
-  };
-  
-  if(POST_URL) {
-    $.post(POST_URL, JSON.stringify(postRequest))
-      .then(res => {
-      
-        e.target.reset();
-        $('#alert-field')
-          .removeClass()
-          .addClass(`alert alert-${res.code}`)
-          .text(res.msg);
-      });
+    body: e.target['body-field'].value };
 
-    $('#alert-field')
-      .removeClass()
-      .html('<progress></progress>')
-      .removeClass('hidden');
+
+  if (POST_URL) {
+    $.post(POST_URL, JSON.stringify(postRequest)).
+    then(res => {
+
+      e.target.reset();
+      $('#alert-field').
+      removeClass().
+      addClass(`alert alert-${res.code}`).
+      text(res.msg);
+    });
+
+    $('#alert-field').
+    removeClass().
+    html('<progress></progress>').
+    removeClass('hidden');
   } else {
     alert('You must set the POST_URL variable with your script ID');
   }
@@ -106,21 +134,25 @@ function sendEmail(e) {
 }
 
 function changeSubject(e) {
-  if(e.target.value === 'Other') {
+  if (e.target.value === 'Other') {
 
-    $('#subject-select').removeClass('col-xs-12')
-      .addClass('col-xs-6');
+    $('#subject-select').removeClass('col-xs-12').
+    addClass('col-xs-6');
     $('#hidden-other-subject').removeClass('hidden');
   } else {
-    $('#subject-select').removeClass('col-xs-6')
-      .addClass('col-xs-12');
+    $('#subject-select').removeClass('col-xs-6').
+    addClass('col-xs-12');
 
     $('#hidden-other-subject').addClass('hidden');
   }
-}</script>
+}
+//# sourceURL=pen.js
+    </script>
 
-</body>
+  
 
 
 
-</html>
+
+ 
+</body></html>
