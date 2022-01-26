@@ -125,7 +125,7 @@ nav li:hover ul {
 }
 
 nav li ul li {
-   display: block;
+   display: inline-block;
  }
 
 .social {
